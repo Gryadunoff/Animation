@@ -69,7 +69,7 @@ body{
   position: absolute;
   left: 225px;
   top: 77px;
-  animation: 10gis infinite wheel linear;
+  animation: 10s infinite wheel linear;
 }
 .wheel-2{
   position: absolute;
@@ -85,3 +85,4 @@ body{
   100%{
     transform: rotate(360deg);
   }
+}
