@@ -1,0 +1,87 @@
+body{
+  margin: 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+  animation: 1s infinite bg linear;
+}
+@keyframes bg{
+  0%{
+    background: rgba(0, 0, 255, 0.3);
+  }
+  50%{
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100%{
+    background: rgba(0, 0, 255, 0.3);
+  }
+}
+
+.car-body{
+  position: fixed;
+  margin-top: 25%;
+  animation: 5s infinite car;
+}
+@keyframes car{
+0%{
+  left: 0%;
+}
+
+50%{
+  left: 85%;
+  
+}
+100%{
+  left: 0;
+  
+    }
+
+  }
+
+  .alarm{
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 64px;
+    top: -10px;
+    animation: 1s infinite  alarm;
+  }
+  @keyframes alarm{
+    0%{
+      background: blue;
+    }
+    50%{
+      background: rgb(255, 0, 0);
+    }
+    100%{
+      background: blue;
+    }
+
+  }
+  
+
+
+.car{
+    transform: scaleX(-1);
+}
+
+.wheel-1{
+  position: absolute;
+  left: 225px;
+  top: 77px;
+  animation: 5s infinite wheel linear;
+}
+.wheel-2{
+  position: absolute;
+  left: 32px;
+  top: 77px;
+  animation: 5s infinite wheel linear;
+}
+
+@keyframes wheel{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
