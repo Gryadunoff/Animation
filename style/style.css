@@ -3,7 +3,7 @@ body{
   padding: 0 15px;
   box-sizing: border-box;
   animation: 1s infinite bg linear;
-}
+ }
 @keyframes bg{
   0%{
     background: rgba(0, 0, 255, 0.3);
@@ -19,25 +19,29 @@ body{
 .car-body{
   position: fixed;
   margin-top: 25%;
-  animation: 10s infinite car;
-  
-}
+  transform: scale(-1,1);
+  animation:  15s infinite car linear ; 
+} 
 @keyframes car{
-0%{
-  left: 2%;
-  
-}
-
-50%{
-  left: 80%;
-  
-}
-
-100%{
-  left: 2%;
-  transform: rotateY(180deg);
+  0%{
+    left: 0%;
   }
-
+46%{
+  left: 85%;
+  transform: scale(-1,1);
+  }
+50%{
+  
+  transform: scale(1,1);
+}
+96%{
+  left: 10%;
+  transform: scale(1,1);
+}
+100%{
+  left: 0%;
+  transform: scale(-1,1);
+}
   }
 
   .alarm{
@@ -45,9 +49,11 @@ body{
     height: 40px;
     border-radius: 50%;
     position: absolute;
-    right: 64px;
+    left: 64px;
     top: -10px;
+    z-index: -1;
     animation: 1s infinite  alarm;
+
   }
   @keyframes alarm{
     0%{
@@ -64,19 +70,17 @@ body{
   
 
 
-.car{
-    transform: scaleX(-1);
-}
+
 
 .wheel-1{
   position: absolute;
-  left: 225px;
+  right:  225px;
   top: 77px;
   animation: 10s infinite wheel linear;
 }
 .wheel-2{
   position: absolute;
-  left: 32px;
+  right:  32px;
   top: 77px;
   animation: 10s infinite wheel linear;
 }
@@ -86,6 +90,6 @@ body{
     transform: rotate(0deg);
   }
   100%{
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
